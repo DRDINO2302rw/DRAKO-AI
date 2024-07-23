@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrado de Fondos de Imágenes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" id="logo">
+    </header>
+    <main>
+        <div class="upload-section">
+            <input type="file" id="upload" accept="image/*" hidden>
+            <button id="upload-btn">Elegir Fotos</button>
+        </div>
+        <div class="progress-section">
+            <div id="progress-bar">
+                <div id="progress">0%</div>
+            </div>
+        </div>
+        <div class="image-section">
+            <div class="original">
+                <h2>Foto Original</h2>
+                <img id="original-image" src="#" alt="">
+            </div>
+            <div class="removed-background">
+                <h2>Foto con Fondo Borrado</h2>
+                <img id="removed-bg-image" src="#" alt="">
+            </div>
+        </div>
+        <div class="download-section">
+            <button id="download-low" onclick="downloadImage('low')">Descargar en Baja Resolución (Gratis)</button>
+            <button id="download-high" onclick="downloadImage('high')">Descargar en Alta Resolución (0.50 Soles)</button>
+            <button id="subscribe">Suscripción (5 Soles/mes)</button>
+        </div>
+
+
+        <div class="wallpapers-section">
+            <h2>Fondos de Pantalla</h2>
+            <div class="wallpapers">
+                <!-- Aquí se agregarán dinámicamente los fondos de pantalla -->
+
+                <div class="wallpaper">
+                    <img src="https://i.pinimg.com/736x/ce/bb/09/cebb0990b08cc8c1d7e37fda0866d697.jpg" alt="Wallpaper 1">
+                    <button class="download-wallpaper">Descargar</button>
+                </div>
+
+                <div class="wallpaper">
+                    <img src="https://i.pinimg.com/736x/62/d2/46/62d246f701619c33131a1de14ca8d74c.jpg" alt="Wallpaper 2">
+                    <button class="download-wallpaper">Descargar</button>
+                </div>
+
+                <div class="wallpaper">
+                    <img src="https://i.pinimg.com/736x/e5/bd/b6/e5bdb65fb95222fe47d4b9616a682385.jpg" alt="Wallpaper 2">
+                    <button class="download-wallpaper">Descargar</button>
+                </div>
+
+                <div class="wallpaper">
+                    <img src="https://i.pinimg.com/736x/a3/ff/ec/a3ffecb3a7034fdf6806e019ad52cbba.jpg" download alt="Wallpaper 2">
+                    <button class="download-wallpaper">Descargar</button>
+                </div>
+                <!-- Añadir más fondos de pantalla según sea necesario -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Pagos a través de PayPal y Yape</p>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

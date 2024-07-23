@@ -1,0 +1,163 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background-image: url('https://i.pinimg.com/564x/76/65/94/76659449d0d48895f3d2285f0de222b6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Estilos para el logo */
+#logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 0;
+    /* Añadir sombra si se desea */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background: #55555560;
+    backdrop-filter: blur(2px);
+}
+main {
+    padding: 20px;
+}
+
+.upload-section {
+    margin: 20px 0;
+}
+
+#upload-btn, .download-wallpaper, #download-low, #download-high, #subscribe {
+    background: linear-gradient(45deg, #ff0000, #800080);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+#upload-btn:hover, .download-wallpaper:hover, #download-low:hover, #download-high:hover, #subscribe:hover {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(128, 0, 128, 0.8);
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#progress-bar {
+    width: 100%;
+    background-color: #555;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
+}
+
+#progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #ff0000, #800080);
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+    transition: width 0.4s ease;
+}
+
+#progress-bar:hover #progress {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(128, 0, 128, 0.8);
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    
+    border-radius: 10px;
+}
+
+.download-section,
+.wallpapers-section {
+    margin: 20px 0;
+}
+
+.wallpapers-section{
+    background-image: url('https://i.pinimg.com/564x/ee/ae/0d/eeae0d412cc0784f45617ee62195416b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wallpapers-section .wallpapers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wallpaper {
+    margin: 10px;
+    text-align: center;
+}
+
+.wallpapers-section .wallpapers img {
+    max-width: 200px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.wallpapers-section .wallpapers img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    padding: 10px;
+    background-color: #1e1e1e;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .image-section {
+        flex-direction: column;
+    }
+
+    .image-section img {
+        max-width: 80%;
+        margin: 10px auto;
+    }
+
+    .wallpapers-section .wallpapers img {
+        max-width: 100%;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #upload-btn, .download-wallpaper, #download-low, #download-high, #subscribe {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .wallpapers-section .wallpapers img {
+        max-width: 100%;
+        margin: 10px;
+    }
+}
